@@ -37,6 +37,7 @@
         console.log('icsContent', icsContent);
   
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        console.log('isIOS', isIOS);
   
         if (isIOS) {
           const dataUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
