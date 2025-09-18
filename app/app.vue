@@ -20,7 +20,7 @@
   const handleICSDownload = async () => {
     const start = moment(startAt.value).format('YYYY-M-D-H-m').split('-').map(a => parseInt(a));
 
-  const event = {
+    const event = {
       title: 'Запись на прием',
       start,
       duration: { hours: 1 }
@@ -36,6 +36,7 @@
           resolve(value);
         });
       });
+      console.log(icsContent);
 
       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
